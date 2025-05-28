@@ -9,12 +9,11 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
+  base: process.env.VITE_BASE_PATH || "/venezuela-bakery",
   plugins: [
     react(),
     // Enable component tagging in development mode
-    base: process.env.VITEG_BASE_PATH || "/venezuela-bakery",
-    mode === 'development' &&
-    componentTagger(),
+    mode === 'development' && componentTagger(),
   ].filter(Boolean),
   resolve: {
     alias: {
