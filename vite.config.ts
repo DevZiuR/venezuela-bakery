@@ -12,7 +12,7 @@ export default defineConfig(({ mode }) => ({
   plugins: [
     react(),
     // Enable component tagging in development mode
-    base: process.env.VITE_BASE_PATH || "/",
+    base: process.env.VITEG_BASE_PATH || "/venezuela-bakery",
     mode === 'development' &&
     componentTagger(),
   ].filter(Boolean),
